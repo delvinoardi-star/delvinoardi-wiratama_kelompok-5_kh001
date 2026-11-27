@@ -1,0 +1,13 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    # Di Flutter SDK terbaru (>= 3.47), 'package:flutter/material.dart' diberi
+    # label deprecated karena Material dipindah ke paket material_ui.
+    # Proyek ini sengaja tetap memakai flutter/material.dart supaya bisa jalan
+    # di Flutter versi kampus/laptop yang lebih lama. Info itu kita abaikan.
+    deprecated_member_use: ignore
+  exclude:
+    - build/**
+    - android/**
+    - web/**
