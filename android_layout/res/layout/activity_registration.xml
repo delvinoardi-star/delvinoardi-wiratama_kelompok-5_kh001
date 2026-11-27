@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tugas 1: Form Registrasi Akun Mahasiswa (root wajib RelativeLayout) -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Judul: rata tengah atas -->
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Form Pendaftaran Akun"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Username: di bawah judul -->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJudul"
+        android:layout_marginTop="24dp"
+        android:hint="Username"
+        android:inputType="text" />
+
+    <!-- Email: di bawah Username -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etUsername"
+        android:layout_marginTop="12dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <!-- Tombol bantuan (?): di kanan, di bawah Email -->
+    <Button
+        android:id="@+id/btnBantuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etEmail"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:text="\?" />
+
+    <!-- Password: di kiri tombol bantuan dan sejajar vertikal dengannya.
+         Password yang mengacu ke tombol (bukan sebaliknya) supaya tidak ada
+         circular dependency di RelativeLayout. -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/btnBantuan"
+        android:layout_alignTop="@id/btnBantuan"
+        android:layout_alignBottom="@id/btnBantuan"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <!-- Register: menempel di bawah layar, lebar penuh -->
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="12dp"
+        android:text="Register" />
+
+</RelativeLayout>
